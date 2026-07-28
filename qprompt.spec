@@ -47,6 +47,7 @@ controls.
 
 %build
 %cmake \
+    -DSOURCE_DEPENDENCIES_EXCLUSIVELY_FROM_SYSTEM=ON
     -GNinja \
     -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_TESTING=OFF
