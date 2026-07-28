@@ -48,9 +48,8 @@ controls.
 %build
 %cmake \
     -DSOURCE_DEPENDENCIES_EXCLUSIVELY_FROM_SYSTEM=ON \
-    -GNinja \
-    -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_TESTING=OFF
+
 %cmake_build
 
 %install
@@ -67,15 +66,12 @@ find %{buildroot}%{_datadir}/metainfo %{buildroot}%{_datadir}/appdata \
     -name '*.xml' -print0 2>/dev/null | xargs -0 -r appstream-util validate-relax
 
 %files
-%license LICENSE* COPYING*
-%doc README* CHANGELOG* AUTHORS*
 %{_bindir}/qprompt
-%{_datadir}/applications/*.desktop
+%{_datadir}/applications/com.cuperino.qprompt.desktop
+%{_datadir}/metainfo/com.cuperino.qprompt.appdata.xml
 %{_datadir}/icons/hicolor/*/apps/*
-%{_datadir}/icons/hicolor/scalable/apps/*
-%{_datadir}/metainfo/*.xml
-%{_datadir}/qprompt/
-%{_datadir}/locale/*/LC_MESSAGES/*.mo
+%{_datadir}/doc/qprompt/
+%{_mandir}/man1/qprompt.1*
 
 %changelog
 * Sat Jul 25 2026 COPR Builder <builder@example.invalid> - 2.0.2-1
