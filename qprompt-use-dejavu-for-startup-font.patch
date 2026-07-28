@@ -1,0 +1,13 @@
+diff --git a/src/kirigami_ui/main.qml b/src/kirigami_ui/main.qml
+index 3cdbd30..f5d0cb0 100644
+--- a/src/kirigami_ui/main.qml
++++ b/src/kirigami_ui/main.qml
+@@ -540,7 +540,7 @@ Kirigami.ApplicationWindow {
+                     font.family: numbersFont.name
+                     FontLoader {
+                         id: numbersFont
+-                        source: "../fonts/LibertinusSans-Regular.otf"
++                        source: "../fonts/DejaVuSans.ttf"
+                     }
+                 }
+             }
