@@ -1,0 +1,12 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index f0eadb1..0934a3d 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -310,7 +310,6 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
+ if (NOT IOS)
+     qt_add_resources(${PROJECT_NAME} "fonts"
+         PREFIX "/qt/qml/com/cuperino/qprompt/"
+-        BIG_RESOURCES
+         FILES
+         ${font_files}
+     )

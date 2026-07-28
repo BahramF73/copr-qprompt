@@ -1,12 +1,12 @@
 Name:           qprompt
 Version:        2.0.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Personal teleprompter software for video creators
 
 License:        GPL-3.0-or-later AND CC-BY-4.0
 URL:            https://qprompt.app/
 Source0:        https://github.com/Cuperino/QPrompt-Teleprompter/archive/refs/tags/v%{version}.tar.gz
-Patch0:         qprompt-use-dejavu-for-startup-font.patch
+Patch0:         qprompt-disable-big-font-resources.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake
@@ -75,6 +75,9 @@ find %{buildroot}%{_datadir}/metainfo %{buildroot}%{_datadir}/appdata \
 %{_mandir}/man1/qprompt.1*
 
 %changelog
+* Tue Jul 28 2026 COPR Builder <builder@example.invalid> - 2.0.2-3
+- Disable BIG_RESOURCES for embedded fonts to avoid a crash while reading Qt resources
+
 * Tue Jul 28 2026 COPR Builder <bahram.0098.bf@gmail.com> - 2.0.2-2
 - Replace the startup Libertinus font with DejaVu Sans to investigate a crash during font loading
 
